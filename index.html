@@ -15,7 +15,7 @@
     }
     @font-face {
       font-family: 'DM Sans';
-      src: url('/public/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+      src: url('/public/fonts/DMSans-VariableFont_opsz-wght.ttf') format('truetype');
       font-weight: 100 900;
       font-style: normal;
       font-display: swap;
@@ -42,6 +42,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 13px 6%; background: rgba(248,246,241,0.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
     .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
     .logo img { height: 26px; width: auto; }
+    .logo img.loaded + .logo-text { display: none; }
     .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.5px; }
     .logo-text span { color: var(--accent); }
     .nav-r { display: flex; align-items: center; gap: 10px; }
@@ -189,7 +190,7 @@
 
 <nav>
   <a href="#" class="logo">
-    <img src="/public/logo.png" alt="PromptIQ" onerror="this.style.display='none'" />
+    <img src="/public/logo.png" alt="PromptIQ" onload="this.classList.add('loaded')" onerror="this.style.display='none'" />
     <span class="logo-text">Prompt<span>IQ</span></span>
   </a>
   <div class="nav-r">
