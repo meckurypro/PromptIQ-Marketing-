@@ -4,11 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PromptIQ — AI-Powered Content & Creative Services</title>
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/public/favicon.png" />
   <style>
+    @font-face {
+      font-family: 'Syne';
+      src: url('/public/fonts/Syne-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      src: url('/public/fonts/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #F8F6F1;
@@ -59,7 +71,7 @@
     .hstat strong { display: block; font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
     .hstat span { font-size: 0.72rem; color: var(--muted); }
 
-    /* Platform cards (Hero) */
+    /* PLATFORM CARDS */
     .platform-stack { display: flex; flex-direction: column; gap: 9px; }
     .pcard { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); text-decoration: none; color: var(--text); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
     .pcard:hover { transform: translateX(4px); box-shadow: 0 4px 18px rgba(0,0,0,0.06); border-color: rgba(26,79,255,0.22); }
@@ -118,13 +130,11 @@
 
     /* CONTACT */
     .ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-    .wa-box { background: var(--text); border-radius: var(--r); padding: 32px; color: #fff; }
+    .wa-box { background: var(--text); border-radius: var(--r); padding: 32px; color: #fff; margin-top: 24px; }
     .wa-box h3 { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
     .wa-box p { font-size: 0.86rem; color: rgba(255,255,255,0.55); line-height: 1.72; font-weight: 300; }
-    .wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px; text-decoration: none; margin-top: 20px; width: fit-content; transition: opacity 0.2s, transform 0.15s; }
+    .wa-btn { display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #fff; font-weight: 600; font-size: 0.9rem; padding: 13px 22px; border-radius: 100px; text-decoration: none; margin-top: 20px; transition: opacity 0.2s, transform 0.15s; }
     .wa-btn:hover { opacity: 0.9; transform: translateY(-2px); }
-
-    /* Contact links */
     .cl-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
     .clinks { display: flex; flex-direction: column; gap: 8px; }
     .cl { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-sm); text-decoration: none; color: var(--text); transition: border-color 0.2s, transform 0.15s; }
@@ -135,6 +145,9 @@
     .cl-arr { margin-left: auto; color: var(--muted); font-size: 0.85rem; }
     .p-note { margin-top: 14px; padding: 13px 16px; background: var(--accent-l); border-radius: var(--r-sm); font-size: 0.8rem; color: var(--accent); display: flex; gap: 8px; align-items: flex-start; line-height: 1.6; }
 
+    /* ABOUT CTA spacing */
+    .about-cta { margin-top: 24px; }
+
     /* FOOTER */
     footer { background: var(--text); color: rgba(255,255,255,0.35); padding: 24px 6%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .f-brand { font-family: 'Syne', sans-serif; font-weight: 800; color: #fff; font-size: 0.95rem; letter-spacing: -0.3px; }
@@ -144,7 +157,7 @@
     .f-links a { color: rgba(255,255,255,0.35); text-decoration: none; font-size: 0.75rem; transition: color 0.2s; }
     .f-links a:hover { color: #fff; }
 
-    /* ANIM */
+    /* ANIMATIONS */
     @keyframes fu { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     .rev { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .rev.on { opacity: 1; transform: none; }
@@ -176,7 +189,7 @@
 
 <nav>
   <a href="#" class="logo">
-    <img src="/logo.png" alt="PromptIQ" onerror="this.style.display='none'" />
+    <img src="/public/logo.png" alt="PromptIQ" onerror="this.style.display='none'" />
     <span class="logo-text">Prompt<span>IQ</span></span>
   </a>
   <div class="nav-r">
@@ -221,7 +234,7 @@
     <span class="ti">Workflow Automation<span class="td"></span></span>
     <span class="ti"><strong>Web App Development</strong><span class="td"></span></span>
     <span class="ti">Millions of Views Globally<span class="td"></span></span>
-    <!-- Duplicate set for seamless loop -->
+    <!-- Duplicate for seamless CSS loop -->
     <span class="ti"><strong>Content Placement</strong><span class="td"></span></span>
     <span class="ti">Custom Cinematic Videos<span class="td"></span></span>
     <span class="ti"><strong>Brand Collaborations</strong><span class="td"></span></span>
@@ -310,7 +323,7 @@
       <h2 class="hdg">Not just content.<br/>Cinematic storytelling.</h2>
       <p class="sub">PromptIQ builds AI-powered content that educates, moves and converts. From African heads of state to world history — every piece is crafted with intention and distributed across five platforms to a global audience.</p>
       <p class="sub">We also teach the craft, build web applications and design automation systems that help businesses run smarter. One studio. Many capabilities.</p>
-      <a id="about-wa" href="#" target="_blank" class="btn-d" style="margin-top:24px;">Start a Conversation →</a>
+      <a id="about-wa" href="#" target="_blank" class="btn-d about-cta">Start a Conversation →</a>
     </div>
     <div class="facts rev">
       <div class="fact ac"><strong>Millions</strong><span>of views & counting</span></div>
@@ -329,7 +342,7 @@
       <p class="lbl">Get In Touch</p>
       <h2 class="hdg">Ready to work<br/>together?</h2>
       <p class="sub">We keep it direct. No corporate runaround. Reach out on any platform — WhatsApp gets the fastest response.</p>
-      <div class="wa-box" style="margin-top:24px;">
+      <div class="wa-box">
         <h3>Let's talk about your project.</h3>
         <p>Tell us what you need — a placement, full production, training or a web system. We'll find the best path together.</p>
         <a id="contact-wa" href="#" target="_blank" class="wa-btn">💬 Chat on WhatsApp</a>
@@ -420,7 +433,9 @@
   /* ── Contact platform links ── */
   const contactLinks = document.getElementById('contact-platforms');
   PLATFORMS.forEach(p => {
-    const iconStyle = p.iconStyle ? ` style="background:${p.iconBg}; ${p.iconStyle}"` : ` style="background:${p.iconBg};"`;
+    const iconStyle = p.iconStyle
+      ? ` style="background:${p.iconBg}; ${p.iconStyle}"`
+      : ` style="background:${p.iconBg};"`;
     contactLinks.insertAdjacentHTML('beforeend', `
       <a href="${p.url}" target="_blank" class="cl">
         <div class="cl-icon"${iconStyle}>${p.icon}</div>
