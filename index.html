@@ -20,8 +20,8 @@
   --display:'Bebas Neue',sans-serif;--ui:'Outfit',sans-serif;--body:'DM Sans',sans-serif;
   --r:12px;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--navy);color:var(--body-text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--body);background:var(--navy);color:var(--body-text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;width:100%;box-sizing:border-box}
 a{text-decoration:none}
 .page{display:none}.page.active{display:block}
 
@@ -125,7 +125,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
 
 /* SVC GRID */
 .svc-hdr{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:40px}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.svc-grid .sc:last-child:nth-child(3n+1){grid-column:span 3}.svc-grid .sc:last-child:nth-child(3n+2){grid-column:span 2}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%}.svc-grid .sc:last-child:nth-child(3n+1){grid-column:span 3}.svc-grid .sc:last-child:nth-child(3n+2){grid-column:span 2}
 .sc{background:var(--navy-card);border:1px solid var(--border-soft);border-radius:var(--r);padding:26px 22px;position:relative;overflow:hidden;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s}
 .sc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--cyan-bright));transform:scaleX(0);transform-origin:left;transition:transform 0.35s}
 .sc:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(41,182,246,0.1);border-color:var(--border)}
@@ -235,7 +235,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .faq p{font-size:0.83rem;color:var(--body-text);line-height:1.72;font-weight:300}
 
 /* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:900px){.home-hero,.sp-hero,.learn-hero{overflow:hidden}.svc-grid{grid-template-columns:1fr!important}.svc-grid .sc:last-child{grid-column:span 1!important}
   .home-hero{grid-template-columns:1fr;min-height:auto;padding-top:100px}
   .svc-hdr{grid-template-columns:1fr}
   .svc-grid{grid-template-columns:1fr 1fr}
@@ -249,6 +249,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
   .faq-grid{grid-template-columns:1fr}
   .nav-links{display:none}
 }
+.svc-hdr,.pkg-grid,.proc-grid,.course-grid,.why-grid,.inst-grid,.faq-grid,.reach-grid,.facts{min-width:0;overflow:hidden}
 @media(max-width:580px){
   .svc-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(3,1fr)}
