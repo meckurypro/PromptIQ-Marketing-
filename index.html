@@ -15,6 +15,8 @@
   --border:rgba(41,182,246,0.15);--border-soft:rgba(255,255,255,0.06);
   --amber:#F5A623;--amber-bright:#FFB830;
   --amber-dim:rgba(245,166,35,0.09);--amber-border:rgba(245,166,35,0.2);
+  --pink:#F06292;--pink-bright:#FF80AB;
+  --pink-dim:rgba(240,98,146,0.09);--pink-border:rgba(240,98,146,0.22);
   --wa:#25D366;--wa-dark:#1DA851;
   --white:#FFFFFF;--off-white:#E8EEF8;--body-text:#B8C4D8;--muted:#6A7A9A;
   --display:'Bebas Neue',sans-serif;--ui:'Outfit',sans-serif;--body:'DM Sans',sans-serif;
@@ -37,6 +39,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-outline:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
 .btn-amber{display:inline-flex;align-items:center;gap:7px;background:var(--amber);color:var(--navy);font-family:var(--body);font-size:0.88rem;font-weight:700;padding:13px 24px;border-radius:100px;transition:background 0.2s,transform 0.15s;cursor:pointer}
 .btn-amber:hover{background:var(--amber-bright);transform:translateY(-2px)}
+.btn-pink{display:inline-flex;align-items:center;gap:7px;background:var(--pink);color:var(--white);font-family:var(--body);font-size:0.88rem;font-weight:700;padding:13px 24px;border-radius:100px;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;cursor:pointer}
+.btn-pink:hover{background:var(--pink-bright);transform:translateY(-2px);box-shadow:0 8px 24px rgba(240,98,146,0.3)}
 .btn-wa{display:inline-flex;align-items:center;gap:9px;background:var(--wa);color:#fff;font-family:var(--body);font-weight:700;font-size:0.9rem;padding:14px 28px;border-radius:100px;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;cursor:pointer}
 .btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.3)}
 .sec{position:relative;z-index:1;padding:80px 6%}
@@ -62,6 +66,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(1.5)}}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+
+/* ── HOME ── */
 .home-hero{position:relative;z-index:1;padding:130px 6% 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:100vh;overflow:hidden}
 .h-glow1{position:absolute;top:-10%;right:-5%;width:600px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(41,182,246,0.07) 0%,transparent 70%);pointer-events:none}
 .h-glow2{position:absolute;bottom:0;left:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(245,166,35,0.05) 0%,transparent 70%);pointer-events:none}
@@ -97,6 +103,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .ti{display:inline-flex;align-items:center;gap:10px;padding:0 24px;font-size:0.76rem;color:var(--muted)}
 .ti strong{color:var(--amber);font-weight:600}
 .td{width:4px;height:4px;background:var(--cyan);border-radius:50%;opacity:0.4;flex-shrink:0}
+
+/* ── SERVICES ── */
 .svc-hdr{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:40px}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .sc{background:var(--navy-card);border:1px solid var(--border-soft);border-radius:var(--r);padding:26px 22px;position:relative;overflow:hidden;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;display:flex;flex-direction:column}
@@ -110,6 +118,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .sc-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:14px}
 .sc-tag{display:inline-block;font-size:0.66rem;font-weight:600;color:var(--cyan);background:var(--cyan-dim);border:1px solid var(--border);padding:3px 9px;border-radius:100px}
 .sc-price{display:inline-block;font-size:0.7rem;font-weight:700;color:var(--amber-bright);background:var(--amber-dim);border:1px solid var(--amber-border);padding:3px 10px;border-radius:100px}
+
+/* ── ABOUT ── */
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .facts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .fact{background:var(--navy);border:1px solid var(--border-soft);border-radius:var(--r);padding:18px;transition:border-color 0.2s}
@@ -121,6 +131,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .fact-w{grid-column:span 2}
 .cta-sec{text-align:center}
 .cta-box{max-width:640px;margin:0 auto}
+
+/* ── SPONSOR PAGE ── */
 .sp-hero{position:relative;z-index:1;padding:160px 6% 100px;min-height:70vh;display:flex;align-items:center;overflow:hidden}
 .sp-glow{position:absolute;top:-20%;right:-5%;width:700px;height:600px;border-radius:50%;background:radial-gradient(ellipse,rgba(245,166,35,0.07) 0%,transparent 70%);pointer-events:none}
 .sp-inner{max-width:640px;position:relative;z-index:1}
@@ -148,6 +160,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .step-n{font-family:var(--display);font-size:2.5rem;letter-spacing:1px;background:linear-gradient(135deg,var(--amber),rgba(245,166,35,0.1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:8px}
 .step h4{font-family:var(--ui);font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:8px}
 .step p{font-size:0.82rem;color:var(--body-text);line-height:1.7;font-weight:300}
+
+/* ── LEARN PAGE ── */
 .learn-hero{position:relative;z-index:1;padding:160px 6% 100px;min-height:75vh;display:flex;align-items:center;overflow:hidden}
 .l-glow1{position:absolute;top:-10%;right:0;width:600px;height:500px;border-radius:50%;background:radial-gradient(ellipse,rgba(41,182,246,0.07) 0%,transparent 70%);pointer-events:none}
 .l-glow2{position:absolute;bottom:0;left:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(ellipse,rgba(245,166,35,0.05) 0%,transparent 70%);pointer-events:none}
@@ -156,24 +170,40 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .ldot{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 8px var(--cyan);animation:pulse 1.6s ease-in-out infinite;flex-shrink:0}
 .h1-learn{font-family:var(--display);font-size:clamp(3rem,5.5vw,5.5rem);letter-spacing:2px;text-transform:uppercase;color:var(--white);line-height:1.0;animation:fadeUp 0.5s 0.1s ease both}
 .h1-learn .c{color:var(--cyan)}
-.course-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+
+/* ── COURSE GRID — now 3 columns when wide enough ── */
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+
+/* base card */
 .course{background:var(--navy-card);border:1px solid var(--border-soft);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;gap:16px;transition:transform 0.22s,box-shadow 0.22s}
 .course:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(41,182,246,0.08)}
+
+/* amber variant (card 2) */
 .course-amber{border-color:var(--amber-border);background:linear-gradient(135deg,rgba(245,166,35,0.05),var(--navy-card))}
 .course-amber:hover{box-shadow:0 14px 36px rgba(245,166,35,0.08)}
+
+/* pink variant (card 3) */
+.course-pink{border-color:var(--pink-border);background:linear-gradient(135deg,rgba(240,98,146,0.06),var(--navy-card))}
+.course-pink:hover{box-shadow:0 14px 36px rgba(240,98,146,0.1)}
+
 .c-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 .c-sub{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
 .c-title{font-family:var(--display);font-size:2rem;letter-spacing:1px;text-transform:uppercase;color:var(--white);line-height:1.0}
 .course-amber .c-title{color:var(--amber-bright)}
+.course-pink  .c-title{color:var(--pink-bright)}
 .c-price{font-family:var(--display);font-size:2.5rem;letter-spacing:1px;color:var(--cyan);white-space:nowrap}
 .course-amber .c-price{color:var(--amber-bright)}
+.course-pink  .c-price{color:var(--pink-bright)}
 .c-meta{display:flex;gap:8px;flex-wrap:wrap}
 .mtag{font-size:0.73rem;color:var(--muted);background:var(--navy);border:1px solid var(--border-soft);padding:4px 10px;border-radius:100px}
 .c-desc{font-size:0.86rem;color:var(--body-text);line-height:1.74;font-weight:300}
 .c-tags{display:flex;gap:7px;flex-wrap:wrap}
 .ctag{font-size:0.69rem;font-weight:600;color:var(--cyan);background:var(--cyan-dim);border:1px solid var(--border);padding:3px 9px;border-radius:100px}
 .course-amber .ctag{color:var(--amber-bright);background:var(--amber-dim);border-color:var(--amber-border)}
+.course-pink  .ctag{color:var(--pink-bright);background:var(--pink-dim);border-color:var(--pink-border)}
 .c-note{font-size:0.74rem;color:var(--muted);text-align:center;line-height:1.5;margin-top:4px}
+
+/* ── WHY / INSTRUCTOR / FAQ ── */
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
 .why{background:var(--navy-card);border:1px solid var(--border-soft);border-radius:var(--r);padding:26px 22px;transition:transform 0.22s,border-color 0.22s}
 .why:hover{transform:translateY(-3px);border-color:var(--border)}
@@ -191,6 +221,11 @@ footer p{font-size:0.74rem;color:var(--muted)}
 .faq:hover{border-color:var(--border)}
 .faq h4{font-family:var(--ui);font-size:0.92rem;font-weight:700;color:var(--white);margin-bottom:8px}
 .faq p{font-size:0.83rem;color:var(--body-text);line-height:1.72;font-weight:300}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .course-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:900px){
   .home-hero{grid-template-columns:1fr;min-height:auto;padding-top:100px}
   .svc-hdr{grid-template-columns:1fr}
@@ -227,6 +262,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
   </div>
 </nav>
 
+<!-- ══════════════════ HOME PAGE ══════════════════ -->
 <div id="page-home" class="page active">
   <section class="home-hero">
     <div class="h-glow1"></div><div class="h-glow2"></div>
@@ -334,6 +370,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
   </footer>
 </div>
 
+<!-- ══════════════════ SPONSOR PAGE ══════════════════ -->
 <div id="page-sponsor" class="page">
   <section class="sp-hero">
     <div class="sp-glow"></div>
@@ -465,10 +502,11 @@ footer p{font-size:0.74rem;color:var(--muted)}
         <ul class="pkg-list">
           <li><span class="chk">✓</span>AI Proficiency — 2 weeks, beginner</li>
           <li><span class="chk">✓</span>Cinematic AI — 1 week, intermediate</li>
+          <li><span class="chk">✓</span>Cinematic AI Internship — 3 months</li>
           <li><span class="chk">✓</span>WhatsApp-based cohort learning</li>
           <li><span class="chk">✓</span>Direct instructor feedback</li>
         </ul>
-        <a href="https://wa.me/447901929711?text=Hi%2C%20I%27m%20interested%20in%20joining%20a%20PromptIQ%20course.%20My%20name%20is%3A" target="_blank" rel="noopener" class="btn-outline" style="margin-top:auto">Join the Waitlist →</a>
+        <a onclick="showPage('learn')" class="btn-outline" style="margin-top:auto;cursor:pointer">View All Courses →</a>
       </div>
       <div class="pkg rev">
         <span class="pkg-icon">⚙️</span>
@@ -516,6 +554,7 @@ footer p{font-size:0.74rem;color:var(--muted)}
   </footer>
 </div>
 
+<!-- ══════════════════ LEARN PAGE ══════════════════ -->
 <div id="page-learn" class="page">
   <section class="learn-hero">
     <div class="l-glow1"></div><div class="l-glow2"></div>
@@ -530,10 +569,12 @@ footer p{font-size:0.74rem;color:var(--muted)}
     <div class="rev">
       <span class="gline"></span>
       <p class="lbl">Available Courses</p>
-      <h2 class="hdg">Two paths.<br/>One standard.</h2>
+      <h2 class="hdg">Three paths.<br/>One standard.</h2>
       <p class="sub">Join the waitlist for the next cohort. You'll be notified when spots open and can pay and join directly from there.</p>
     </div>
     <div class="course-grid">
+
+      <!-- Card 1 — Cyan (default) -->
       <div class="course rev">
         <div class="c-top">
           <div><p class="c-sub">2 Weeks · Beginner</p><h3 class="c-title">AI Proficiency</h3></div>
@@ -558,6 +599,8 @@ footer p{font-size:0.74rem;color:var(--muted)}
           <p class="c-note">Message us on WhatsApp to reserve your spot. Payment details sent on confirmation.</p>
         </div>
       </div>
+
+      <!-- Card 2 — Amber -->
       <div class="course course-amber rev">
         <div class="c-top">
           <div><p class="c-sub">1 Week · Intermediate</p><h3 class="c-title">Cinematic AI</h3></div>
@@ -584,6 +627,34 @@ footer p{font-size:0.74rem;color:var(--muted)}
           <p class="c-note">Message us on WhatsApp to reserve your spot. Payment details sent on confirmation.</p>
         </div>
       </div>
+
+      <!-- Card 3 — Pink (Internship) -->
+      <div class="course course-pink rev">
+        <div class="c-top">
+          <div><p class="c-sub">3 Months · Intermediate</p><h3 class="c-title">Cinematic AI Content Creation</h3></div>
+          <div class="c-price">$8</div>
+        </div>
+        <div class="c-meta">
+          <span class="mtag">⏱ 3 Months</span>
+          <span class="mtag">📊 Intermediate → Professional</span>
+        </div>
+        <p class="c-desc">A hands-on internship built on live PromptIQ productions. 9 skill modules, real audiences, direct mentorship — and a portfolio you can show any brand or client.</p>
+        <div class="c-tags">
+          <span class="ctag">Character Consistency</span>
+          <span class="ctag">Scene Prompting</span>
+          <span class="ctag">AI Music</span>
+          <span class="ctag">VFX</span>
+          <span class="ctag">CapCut Editing</span>
+          <span class="ctag">Sound FX</span>
+          <span class="ctag">Image to Video</span>
+          <span class="ctag">Idea Refinement</span>
+        </div>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px">
+          <a href="https://prompt-iq-internship.vercel.app/" target="_blank" rel="noopener" class="btn-pink" style="justify-content:center">Learn More →</a>
+          <p class="c-note">Apply directly on the internship page. Cohort 1 — limited spots.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -678,6 +749,7 @@ buildPlatforms('home-platforms','cards');
 buildPlatforms('home-footer','links');
 buildPlatforms('sponsor-footer','links');
 buildPlatforms('learn-footer','links');
+
 const PAGES=['home','sponsor','learn'];
 function showPage(name,push=true){
   if(!PAGES.includes(name))name='home';
